@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation'; // ✅ Import the hook
 import { FileText, Home, Menu, Users } from 'lucide-react';
 import clsx from 'clsx';
-import { link } from 'fs';
-
 export default function SideNav() {
   const links = [
     {name: 'dahsboard' ,  href: '/dashboard', Icon : Home},
