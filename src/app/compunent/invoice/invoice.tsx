@@ -12,8 +12,7 @@ function Invoice() {
 
   const styles = {
     container: { padding: '20px', fontFamily: 'Arial', maxWidth: '500px', margin: 'auto' },
-    title: { textAlign: 'center' },
-    table: { width: '100%', borderCollapse: 'collapse', marginTop: '20px' },
+    table: { marginTop: '20px' },
     th: { border: '1px solid #000', padding: '8px', backgroundColor: '#f0f0f0' },
     td: { border: '1px solid #000', padding: '8px', textAlign: 'center' },
     total: { textAlign: 'right', marginTop: '20px' }
@@ -21,7 +20,7 @@ function Invoice() {
 
   return (
     <div style={styles.container}>
-      <h2 style={styles.title}>Invoice</h2>
+      <h2>Invoice</h2>
       <p><strong>Customer:</strong> {customer}</p>
       <p><strong>Date:</strong> {date}</p>
 
@@ -37,16 +36,16 @@ function Invoice() {
         <tbody>
           {items.map((item, i) => (
             <tr key={i}>
-              <td style={styles.td}>{item.name}</td>
-              <td style={styles.td}>{item.quantity}</td>
-              <td style={styles.td}>${item.price}</td>
-              <td style={styles.td}>${item.quantity * item.price}</td>
+              <td>{item.name}</td>
+              <td>{item.quantity}</td>
+              <td>${item.price}</td>
+              <td>${item.quantity * item.price}</td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      <h3 style={styles.total}>Total: ${total}</h3>
+      <h3>Total: ${total}</h3>
     </div>
   );
 }
